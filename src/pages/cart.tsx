@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { NextPage } from "next";
+import { Container } from "reactstrap";
 import Header from "@/components/Header";
+import CartTable from "@/components/CartTable";
+import CartTotal from "@/components/CardTotal";
 
 const Cart: NextPage = () => {
   return (
@@ -13,9 +16,16 @@ const Cart: NextPage = () => {
 
       <Header />
 
-        <h1>
-          Meu carrinho
-        </h1>      
+      <main>
+        <Container className="mb-5">
+          <h1 className="my-5">
+            Carrinho
+          </h1>
+
+          <CartTable />
+          <CartTotal />
+        </Container>
+      </main>     
     </>
   )
 }
